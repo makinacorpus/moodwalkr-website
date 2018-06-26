@@ -1,0 +1,162 @@
+.footer {
+    background: $text-color;
+    overflow: hidden;
+    padding: 2rem 0;
+
+    .logo_makina {
+        align-self: center;
+    }
+
+    @include mqr($sm) {
+        .footer__wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__wrapper {
+        @include wrapper;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__sitemap {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        @include mq($sm) {
+            width: 20%;
+            float: left;
+        }
+
+        &__title {
+            color: $grey-light;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding-bottom: 1.2rem;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            line-height: 2rem;
+
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__mentions {
+        
+        h3 {
+            font-size: 1.5rem;
+            color: #d6e61f;
+            a {
+              color: #d6e61f;
+            }
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        a {
+          color: white;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        #contact {
+            a {
+                font-size: 12px;
+            }
+        }
+ 
+        #social-links {
+            li {
+                display: inline;
+            }
+
+            a {
+                font: 0/0 a;
+                color: transparent;
+                text-shadow: none;
+                background-color: transparent;
+                border: 0;
+                display: inline-block;
+                vertical-align: top;
+                width: 33px;
+                height: 35px;
+                margin-right: 5px;
+                background: url("../img/sprite-menu.png");
+                color: #ef4e70;
+            }
+            
+            .googleplus {
+                background-position: -1080px -38px;
+                &:hover {
+                    background-position: -1080px -84px;
+                }
+            }
+            .RSS {
+                background-position: -5px -38px;
+                &:hover {
+                    background-position: -5px -84px;
+                }
+            }
+            .Twitter {
+                background-position: -60px -38px;
+                &:hover {
+                    background-position: -60px -84px;
+                }
+            }
+            .Github {
+                background-position: -956px -38px;
+                &:hover {
+                    background-position: -956px -84px;
+                }
+            }
+            .Slideshare {
+                background-position: -109px -38px;
+                &:hover {
+                    background-position: -109px -84px;
+                }
+            }
+            .speakerdeck {
+                background-position: -1116px -38px;
+                &:hover {
+                    background-position: -1116px -84px;
+                }
+            }
+            .youtube {
+                background-position: -1149px -38px;
+                &:hover {
+                    background-position: -1149px -84px;
+                }
+            }
+        }
+
+        padding: 0.5rem;
+        color: white;
+        @include mq($sm) {
+            width: 25%;
+        }
+
+        img {
+            max-width: 100px;
+        }
+
+        &__button {
+            margin-top: 1rem;
+            @include mq($sm) {
+                margin-top: 0;
+                margin-right: 0;
+            }
+            margin-bottom: 2em;
+        }
+    }
+}

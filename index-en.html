@@ -1,0 +1,82 @@
+---
+layout: default-en
+title: Home
+class: home
+lang: en
+ref: home
+permalink: /en/about/index:output_ext
+---
+
+<header class="header">
+    {% include navigation.html %}
+    <div class="header__content home__header">
+        <div class="home__header__content">
+            <h1 class="sr-only">MoodWalkR</h1>
+            <img src="/jekyll-assets/img/icon/mood-text.svg" alt="Geotrek logo">
+            <h2 class="home__baseline">Create your walks according to your tastes</h2>
+            <a href="https://moodwalkr.com" class="button button--turquoise">Get started!</a>
+        </div>
+    </div>
+</header>
+
+<section class="home__intro">
+    <h2 class="title home__intro__headline"><a href="https://makina-corpus.com/" target="_blank">Makina Corpus</a>  provides communities, companies and organisations with MoodWalkR application for calculating thematic itineraries for pedestrians.</h2>
+    <h2 class="subtitle home__intro__headline">Two ways to walk around:<br><br>the pedestrian chooses, MoodWalkR provides it...</h2>
+    <div class="grid grid--center">
+        <div class="grid__item grid__item--50">
+            <img class="home__image" src="/jekyll-assets/img/icon/itinerary.svg" alt="">
+            <h3 class="home__intro__title title">Routes</h3>
+            <p>A starting address, a destination, <br>find out the different routes of MoodWalkR!</p>
+        </div>
+        <div class="grid__item grid__item--50">
+            <img class="home__image" src="/jekyll-assets/img/icon/loop.svg" alt="">
+            <h3 class="home__intro__title title">Circular route</h3>
+            <p>Choose your starting point, the duration of your walk
+<br>and let MoodWalkR be your guide!</p>
+        </div>
+    </div>
+    <h2 class="subtitle home__intro__headline"> ...According to everyone's taste</h2>
+    <div class="grid grid--center">
+        <div class="grid__item grid__item--25">
+            <img class="home__image" src="/jekyll-assets/img/icon/rapide.svg" alt="">
+            <h3 class="home__intro__title title">Fastest route</h3>
+            <p>For pedestrians in a hurry, this route allows you to reach your destination quickly.</p>
+        </div>
+        <div class="grid__item grid__item--25">
+            <img class="home__image" src="/jekyll-assets/img/icon/culture.svg" alt="">
+            <h3 class="home__intro__title title">Cultural Walk</h3>
+            <p>Ideal for cultural heritage lovers, this course combines walking and cultural discoveries.</p>
+        </div>
+        <div class="grid__item grid__item--25">
+            <img class="home__image" src="/jekyll-assets/img/icon/nocturne.svg" alt="">
+            <h3 class="home__intro__title title">Night trip</h3>
+            <p>Want to party ? Go on a tour of the most lively nightlife! </p>
+        </div>
+        <div class="grid__item grid__item--25">
+            <img class="home__image" src="/jekyll-assets/img/icon/nature.svg" alt="">
+            <h3 class="home__intro__title title">Nature desire</h3>
+            <p>Wandering invitation while discovering the green spaces surrounding you. </p>
+        </div>
+    </div>
+    <h2 class="title home__intro__headline">If you want to value your open data, discover new places and promote a festival, MoodWalkR is for you!<br> <br><a href="https://makina-corpus.com/" target="_blank">Makina Corpus</a> fulfils all your needs.</h2>
+</section>
+
+<section class="grid contact__banner">
+    <a href="contact.html" class="button button--turquoise" >Contact us</a>
+</section>
+
+<section class="actus">
+    <h2 class="title title--light">All news around MoodWalkR</h2>
+
+    <div class="grid actus__items">
+        {% assign featured_posts = (site.posts|where:"lang","fr") %}
+        {% for post in featured_posts limit:3 %}
+        <div class="grid__item grid__item--33">
+          <h3 class="title title--medium">{{ post.title }}</h3>
+          <p class="subtitle">{% include date.html date=post.date %}{{ month }} {{ year }}</p>
+          <p>{{ post.content }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="actualites.html" class="actus__link">Browse all the news</a>
+</section>

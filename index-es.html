@@ -1,0 +1,81 @@
+---
+layout: default-en
+title: Home
+class: home
+lang: es
+ref: home
+permalink: /es/acerca-de/index:output_ext
+---
+
+<header class="header">
+    {% include navigation.html %}
+    <div class="header__content home__header">
+        <div class="home__header__content">
+            <h1 class="sr-only">MoodWalkR</h1>
+            <img src="/jekyll-assets/img/icon/mood-text.svg" alt="Geotrek logo">
+            <h2 class="home__baseline">Crea tus propias rutas a tu gusto</h2>
+            <a href="https://moodwalkr.com" class="button button--turquoise">¡ Vamos !</a>
+        </div>
+    </div>
+</header>
+
+<section class="home__intro">
+    <h2 class="title home__intro__headline"><a href="https://makina-corpus.com/" target="_blank">Makina Corpus</a>  pone a disposición de las colectividades, empresas y asociaciones, la aplicación MoodWalkR, que permite el cálculo de itinerarios temáticos para los peatones.</h2>
+    <h2 class="subtitle home__intro__headline">Dos maneras de pasearse :<br><br>el peatón elige, MoodWalkR hace lo demás...</h2>
+    <div class="grid grid--center">
+        <div class="grid__item grid__item--50">
+            <img class="home__image" src="/jekyll-assets/img/icon/itinerary.svg" alt="">
+            <h3 class="home__intro__title title">Itinerario</h3>
+            <p>Una dirección de partida, un punto de llegada, <br>descubre los diferentes itinerarios de MoodWalkR !</p>
+        </div>
+        <div class="grid__item grid__item--50">
+            <img class="home__image" src="/jekyll-assets/img/icon/loop.svg" alt="">
+            <h3 class="home__intro__title title">Vuelta</h3>
+            <p>Elige tu punto de salida, la duración del paseo <br>y déjate guiar por MoodWalkR !</p>
+        </div>
+    </div>
+    <h2 class="subtitle home__intro__headline"> ...Al gusto de cada cual</h2>
+    <div class="grid grid--center">
+        <div class="grid__item grid__item--25">
+            <img class="home__image" src="/jekyll-assets/img/icon/rapide.svg" alt="">
+            <h3 class="home__intro__title title">Un trayecto rápido</h3>
+            <p>Destinado a los peatones con prisa, este trayecto permite llegar lo más rápido posible a su destino.</p>
+        </div>
+        <div class="grid__item grid__item--25">
+            <img class="home__image" src="/jekyll-assets/img/icon/culture.svg" alt="">
+            <h3 class="home__intro__title title">Paseo cultural</h3>
+            <p>Ideal para los amantes del patrimonio, este recorrido reune caminata con cultura.</p>
+        </div>
+        <div class="grid__item grid__item--25">
+            <img class="home__image" src="/jekyll-assets/img/icon/nocturne.svg" alt="">
+            <h3 class="home__intro__title title">Marcha nocturna</h3>
+            <p>Ganas de hacer la fiesta ? Descubre los lugares más animados de la noche ! </p>
+        </div>
+        <div class="grid__item grid__item--25">
+            <img class="home__image" src="/jekyll-assets/img/icon/nature.svg" alt="">
+            <h3 class="home__intro__title title">Quieres naturaleza</h3>
+            <p>Una invitación al paso lento descubriendo los espacios verdes a nuestro alrededor. </p>
+        </div>
+    </div>
+    <h2 class="title home__intro__headline">¿ Quieres dar valor a tus datos "open data", proponer nuevos lugares a descubrir, promover un festival ? <br> ¡Adopta MoodWalkR !<br> <br><a href="https://makina-corpus.com/" target="_blank">Makina Corpus</a> se adapta a tus nuevos deseos.</h2>
+</section>
+
+<section class="grid contact__banner">
+    <a href="contact.html" class="button button--turquoise" >Contáctanos</a>
+</section>
+
+<section class="actus">
+    <h2 class="title title--light">La actualidad sobre MoodWalkR</h2>
+
+    <div class="grid actus__items">
+        {% assign featured_posts = (site.posts|where:"lang","fr") %}
+        {% for post in featured_posts limit:3 %}
+        <div class="grid__item grid__item--33">
+          <h3 class="title title--medium">{{ post.title }}</h3>
+          <p class="subtitle">{% include date.html date=post.date %}{{ month }} {{ year }}</p>
+          <p>{{ post.content }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="actualites.html" class="actus__link">Ver todas las novedades</a>
+</section>

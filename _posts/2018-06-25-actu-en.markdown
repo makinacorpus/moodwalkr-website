@@ -1,0 +1,10 @@
+---
+title: MoodWalkR at the Chalenges Numériques
+date: 2018-06-25
+lang: en
+ref: post-20180625
+---
+
+MoodWalkR was presented on June 22nd at the "Challenges Numériques" organised by the Direction Générale des Entreprises and [Bpifrance](https://www.bpifrance.fr/).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tmA0JmN65qI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

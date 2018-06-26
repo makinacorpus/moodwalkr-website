@@ -1,0 +1,25 @@
+<nav class="menu" data-menu>
+    <a href="#" class="menu--mobile" data-toggle-menu>
+        <span class="menu__bar"></span>
+        <span class="menu__bar"></span>
+        <span class="menu__bar"></span>
+    </a>
+    <ul class="menu__liste">
+      <li><a href="index.html" title="Accueil Geotrek" class="menu__liste__item--logo"><img src="/jekyll-assets/img/icon/mood-logo.svg" alt="Geotrek"></a></li>
+      {% for menu in site.translate_menu[page.lang] %}
+      <li><a class="menu__liste__item {% if page.url == menu[1].url %}menu__liste__item--active{% endif %}" href="{{ menu[1].url }}" title="{{ menu[1].name }}">{{ menu[1].name }}</a></li>
+      {% endfor %}
+
+      {% assign currentpagelang=page.lang %}
+      {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+      {% for page in pages %}
+      <li class="menu__lang">
+        {% if currentpagelang == page.lang %}
+        <span class="menu__lang__item {{ page.lang }}">{{ page.lang }}</span>
+        {% else %}
+        <a href="{{ page.url }}" class="menu__lang__item {{ page.lang }}">{{ page.lang }}</a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+</nav>

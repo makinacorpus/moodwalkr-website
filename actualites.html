@@ -1,0 +1,76 @@
+---
+layout: default
+title: Actualités
+class: actualites
+lang: fr
+ref: actualites
+permalink: /fr/apropos/actualites:output_ext
+---
+
+<header class="header header--actualites">
+    {% include navigation.html %}
+
+    <div class="header__content">
+        <div class="header__content">
+          <h1 class="page__title">Suivez l'actualité de MoodWalkR</h1>
+          <h2 class="page__subtitle">Pour rester informé des évolutions ou des nouveautés sur les sites partenaires</h2>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="grid actualites__breadcrumb">
+      <h3 class="grid__item"><a href="index.html">Accueil</a> > Toutes les actualités autour de MoodWalkR</h3>
+    </div>
+
+    <div class="grid actualites__items">
+        {% assign posts=site.posts | where:"lang", "fr" %}
+        {% for post in posts %}
+          <div class="grid__item grid__item--actualite">
+            <h3 class="title title--medium">{{ post.title }}</h3>
+            <p class="subtitle">{% include date.html date=post.date %}{{ month }} {{ year }}</p>
+            <p>{{ post.content }}</p>
+          </div>
+        {% endfor %}
+    </div>
+</section>
+
+<aside class="logos">
+    <ul class="logos__wrapper">
+        <li class="logos__item">
+            <a target="_blank" title="Booster Nova">
+                <img src="/jekyll-assets/img/partners/boosternova.png" alt="Booster Nova"/>
+            </a>
+        </li>
+        <li class="logos__item">
+            <a target="_blank" title="Aerospace valley">
+                <img src="/jekyll-assets/img/partners/aerospace.png" alt="Aerospace valley"/>
+            </a>
+        </li>
+        <li class="logos__item">
+            <a target="_blank" title="Investissement d'avenir">
+                <img src="/jekyll-assets/img/partners/avenir.png" alt="Investissement d'avenir"/>
+            </a>
+        </li>
+        <li class="logos__item">
+            <a target="_blank" title="bpi France">
+                <img src="/jekyll-assets/img/partners/bpi.png" alt="bpi France"/>
+            </a>
+        </li>
+        <li class="logos__item">
+            <a target="_blank" title="Direction générale des entreprises">
+                <img src="/jekyll-assets/img/partners/dge.png" alt="Direction générale des entreprises"/>
+            </a>
+        </li>
+        <li class="logos__item">
+            <a target="_blank" title="Montpellier">
+                <img src="/jekyll-assets/img/partners/montpellier.png" alt="Montpellier"/>
+            </a>
+        </li>
+        <li class="logos__item">
+            <a target="_blank" title="Toulouse">
+                <img src="/jekyll-assets/img/partners/toulouse.png" alt="Toulouse"/>
+            </a>
+        </li>
+    </ul>
+</aside>

@@ -1,0 +1,58 @@
+---
+layout: default-en
+title: Contact
+class: contact
+lang: en
+ref: contact
+permalink: /en/about/contact:output_ext
+---
+
+<header class="header header--contact">
+    {% include navigation.html %}
+
+    <div class="header__content contact__header">
+        <h1 class="page__title">Create your own MoodWalkR ?</h1>
+        <h2 class="page__subtitle">Our experts are available to answer your questions</h2>
+    </div>
+</header>
+
+<section class="contact__content">
+    <div class="grid">
+        <div class="grid__item grid__item--30">
+            <h3 class="title title--medium">Contact</h3>
+            <p>Please provide us with some information on your project and we will gladly get back to you.</p>
+            <div class="contact__field">
+                <h4 class="contact__field__title">Email :</h4>
+                <a class="contact__field__link" href="mailto:projets-sig@makina-corpus.com">projets-sig@makina-corpus.com</a>
+            </div>
+        </div>
+        <div class="grid__item grid__item--70">
+            <h3 class="title contact__content__title">Tell us about your project</h3>
+            <form class="contact__form" id="contact-form" method="post" action="#">
+                <p>
+                    <input type="text" name="fname" placeholder="Name*" required autocomplete="name"/>
+                    <input type="email" name="email" placeholder="Email*" required autocomplete="email"/>
+                </p>
+                <p>
+                    <input type="tel" name="phone" placeholder="Telephone" autocomplete="tel"/>
+                    <input type="text" name="company" placeholder="Organisation"/>
+                </p>
+                <p>
+                    <textarea name="message" rows="4" cols="50" placeholder="Message"></textarea>
+                </p>
+                <div hidden class="contact__form__message contact__form__message--error">
+                   An error occurred while sending the message, please try again or contact us at <a href="mailto:projets-sig@makina-corpus.com">projets-sig@makina-corpus.com</a>.
+                </div>
+                <div hidden class="contact__form__message contact__form__message--success">
+                    Your message has been sent, we will get back to you as soon as possible.
+                </div>
+                <p>
+                    <p>* Mandatory field </p>
+                    <input type="checkbox"  id="checkvalid" onchange="document.getElementById('sendButton').disabled = !this.checked;" />
+                    <label for="checkvalid">By submitting this form, I agree that the information entered in this form will be used and processed to contact me</label>
+                    <input id="sendButton" disabled class="button button--turquoise" type="submit" value="Send your message"/>
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
