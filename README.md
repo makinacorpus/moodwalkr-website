@@ -1,5 +1,5 @@
 # MoodWalkR-website
-Please gives us a visit at [http://MoodWalkR.fr/](http://MoodWalkR.fr/)
+Please gives us a visit at [http://MoodWalkR.com/](http://MoodWalkR.fr/)
 
 
 ## Publication
